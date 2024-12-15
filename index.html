@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meister Döner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: green;
+        }
+
+        header {
+            background-color: #d9230f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        /* Der Container, der beide Menü-Boxen nebeneinander anordnet */
+        .menu-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+
+        /* Gemeinsame Styles für beide Menüs */
+        .menu, .menu2 {
+            width: 45%; /* Beide Menüs nehmen 45% der Gesamtbreite ein */
+            padding: 13px;
+            background: whitesmoke;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            max-height: 550px; /* Maximale Höhe für das Scrollen */
+            overflow-y: auto; /* Ermöglicht das Scrollen, wenn der Inhalt größer wird */
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between; /* Stellt sicher, dass Text und Preis getrennt sind */
+            padding: 10px 0;
+            border-bottom: 2px solid #ccc; /* Der Strich zwischen den Menüeinträgen */
+        }
+
+        /* Optionale Anpassung, um das Bild zu zentrieren und Größe zu kontrollieren */
+        .images img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 180px;
+        }
+
+        .info-section {
+            padding: 40px;
+            text-align: center;
+            background-color: whitesmoke;
+            margin: 35px;
+            border-radius: 30px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .opening-hours {
+    list-style: none; /* Entfernt die Aufzählungszeichen */
+    padding: 0; /* Entfernt den Standard-Abstand */
+    margin: 0;
+    text-align: left; /* Links ausgerichtet */
+}
+
+.opening-hours li {
+    margin-bottom: 5px; /* Abstand zwischen den Einträgen */
+}
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Willkommen bei Meister Döner!</h1>
+        <p>Oberhausen, Bebelstr.195, 46049</p>
+    </header>
+
+    <!-- Der Container für die beiden Menüs -->
+    <div class="menu-container">
+        <div class="menu">
+            <h2>Unser Menü</h2>
+            <h3>Türkische Spezialitäten :</h3>
+            <div class="menu-item">
+                <span><b>1. </b>Döner Tasche</span>
+                <span>7,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>2. </b>Döner Tasche mit <br>gebratenem Gemüse <br>und Dönerfleisch</br></br></span>
+                <span>7,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>3. </b>Döner Tasche Groß</span>
+                <span>10,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>4. </b>Döner Tasche mit <br>gebratenem Gemüse</br>und Dönerfleisch Groß</span>
+                <span>11,00 €</span>
+            </div>
+            <div class = "menu-item">
+                <span><b>5.</b>Döner Dürüm</span>
+                <span>7,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>6. </b>Döner Dürüm mit gebratenem Gemüse und Dönerfleisch</span>
+                <span>8,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>7. </b>Pomm Döner Box</span>
+                <span>7,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>8. </b>Köfte Tasche</span>
+                <span>8,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>9. </b>Türkische Pizza / Lahmacun (mit Dönerfleisch)</span>
+                <span>8,50 €</span>
+            </div>
+            <div class = "menu-item">
+                <span><b>10.</b>Türkische Pizza / Lahmacun (ohne Dönerfleisch)</span>
+                <span>7,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>11. </b>Türkische Pizza / Lahmacun (ohne alles)</span>
+                <span>4,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>12. </b>Döner Teller (mit Pommes oder Reis und Salat)</span>
+                <span>13,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>13. </b>Döner Teller (mit Pommes oder Reis)</span>
+                <span>12,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>14. </b>Döner Teller (mit Salat)</span>
+                <span>12,00 €</span>
+            </div>
+            <div class = "menu-item">
+                <span><b>15.</b>Döner Teller Groß</span>
+                <span>14,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>16. </b>Döner Teller klein</span>
+                <span>9,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>17. </b>Köfte Teller</span>
+                <span>14,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>18. </b>Iskender Kebab</span>
+                <span>14,00 €</span>
+            </div>
+            <h3>Salate & Vegetarisch :</h3>
+            <div class="menu-item">
+                <span><b>19. </b>Vorspeisen Teller (mit Falafel, Sigara Börek, <br>gebr. Gemüse und Sauce nach wahl)</br></span>
+                <span>11,00 €</span>
+            </div>
+            <div class = "menu-item">
+                <span><b>20.</b>Gemüse Tasche</span>
+                <span>5,00 €</span>
+            </div>
+            <div class = "menu-item">
+                <span><b>21.</b>Falafal Tasche</span>
+                <span>Klein: 5,50 € / Groß: 9,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>22. </b>Falafel Teller</span>
+                <span>13,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>23. </b>Gemischter Salat</span>
+                <span>Klein: 6,00 € / Groß: 7,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>24. </b>Gemischter Salat mit Thunfisch</span>
+                <span>Klein: 7,00 € / Groß: 8,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>25. </b>Gefüllte Weinblätter / Sarma (5 Stück)</span>
+                <span>6,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>26. </b>Oliven</span>
+                <span>6,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>27. </b>Weichkäse</span>
+                <span>4,00€</span>
+            </div>
+            <div class="menu-item">
+                <span><b>28. </b>Peperoni</span>
+                <span>4,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>29. </b>Zaziki</span>
+                <span>4,00 €</span>
+            </div>
+        </div>
+
+        <!-- Zweite Menübox -->
+        <div class="menu2">
+            <h3>Beilagen :</h3>
+            <div class="menu-item">
+                <span><b>30. </b>Pommes Frites</span>
+                <span>Klein: 3,50 € / Groß: 4,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>31. </b>Pommes Spezial (mit Currysauce, Mayonnaise und Zwiebeln)</span>
+                <span>6,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>32. </b>Mayonnaise, Ketchup, Currysauce</span>
+                <span>0,70 €</span>
+            </div>
+            <h3>Spezialitäten - Gerichte</h3>
+            <div class="menu-item">
+                <span><b>33. </b>Bratwurst</span>
+                <span>3,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>34. </b>Bratwurst mit Pommes</span>
+                <span>5,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>35. </b>Currywurst mit Pommes</span>
+                <span>6,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>36. </b>Schnitzel natur</span>
+                <span>6,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>37. </b>Schnitzel natur mit Pommes und Salat</span>
+                <span>13,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>38. </b>Chicken Nuggets (6 Stück mit Pommes)</span>
+                <span>6,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>39. </b>Sucuk Tasche</span>
+                <span>7,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>40. </b>Börek (mit Hackfleisch, Spinat, Käse oder Spinat-käse)</span>
+                <span>5,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>41. </b>Sigara Böregi</span>
+                <span>6,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span><b>42. </b>Reis</span>
+                <span>Klein: 6,00 € / Groß: 7,00 €</span>
+            </div>
+            <h3>Dessert :</h3>
+            <div class="menu-item">
+                <span><b>43. </b>Baklava</span>
+                <span>1 Stück: 1,50 € / 6 Stück: 8,00 €</span>
+            </div>
+            <h3>Getränke :</h3>
+            <div class="menu-item">
+                <span>Cola, Cola Zero, Fanta, Sprite, Uludag (0,33l)</span>
+                <span>2,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Cola, Fanta, Sprite (1,0l)</span>
+                <span>3,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Ayran / Ayran Kirsche (0,25l)</span>
+                <span>2,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Durstlöscher (0,5l)</span>
+                <span>2,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Wasser (0,5l)</span>
+                <span>1,50 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Bier (0,5l)</span>
+                <span>3,00 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Schwarzer Tee (Tasse)</span>
+                <span>1,50 €</span>
+            </div>    
+        </div>
+    </div>
+
+    <div class="info-section">
+        <h2>Besuchen Sie uns!</h2>
+        
+        <ul class="opening-hours">
+            <li><p><strong>Öffnungszeiten: </strong></p>Montag - Samstag : 11:00 - 22:30 Uhr</li>
+            <li>Sonntags : 12:00 - 22:30 Uhr</li>
+            <p><strong>Lieferzeiten: </strong></p>
+            <li>Montag - Sonntag : 12:00 - 22:30 Uhr</li>
+            <br>Bestellen können sie über Lieferando, Whatsapp oder per Anruf.</br>
+            <p><strong>Whatsapp: </strong>0178 8516802 / <strong>Tel.: </strong>0208 89957900</p>
+        </ul>
+    </div>
+    
+    <footer>
+        <p>Lassen sie doch gerne eine Bewertung da! <a href="https://www.google.com/maps/place/Meister+D%C3%B6ner/@51.4615071,6.8339903,15z/data=!4m8!3m7!1s0x47b8c06a9b215749:0x8d2f10c5243deace!8m2!3d51.461509!4d6.8339757!9m1!1b1!16s%2Fg%2F11c5rpgvm0?hl=de&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Bewertungsportal</a></p>
+    </footer>
+</body>
+
+</html>
