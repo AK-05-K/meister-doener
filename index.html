@@ -10,11 +10,11 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: green;
+            background-color: #f9f9f9;
         }
 
         header {
-            background-color: red;
+            background-color: #b22222;
             color: white;
             padding: 20px;
             text-align: center;
@@ -24,37 +24,78 @@
             margin: 0;
         }
 
-        /* Der Container, der beide Menü-Boxen nebeneinander anordnet */
+        /* Layout des Menüs */
         .menu-container {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
             padding: 15px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* Gemeinsame Styles für beide Menüs */
-        .menu, .menu2 {
-            width: 45%; /* Beide Menüs nehmen 45% der Gesamtbreite ein */
-            padding: 13px;
+        .menu {
+            flex: 1 1 45%;
+            padding: 15px;
             background: whitesmoke;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
             border-radius: 15px;
-            max-height: 550px; /* Maximale Höhe für das Scrollen */
-            overflow-y: auto; /* Ermöglicht das Scrollen, wenn der Inhalt größer wird */
+            max-height: 550px;
+            overflow-y: auto;
+            min-width: 300px;
+        }
+
+        .menu h2, .menu h3 {
+            text-align: center;
+            color: #333;
         }
 
         .menu-item {
             display: flex;
-            justify-content: space-between; /* Stellt sicher, dass Text und Preis getrennt sind */
+            justify-content: space-between;
+            align-items: center;
             padding: 10px 0;
-            border-bottom: 2px solid #ccc; /* Der Strich zwischen den Menüeinträgen */
+            border-bottom: 1px solid #ddd;
         }
 
-        /* Optionale Anpassung, um das Bild zu zentrieren und Größe zu kontrollieren */
+        .menu-item span {
+            font-size: 14px;
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
         .images img {
-            max-width: 100%;
+            max-width: 270px;
             height: auto;
             border-radius: 10px;
-            margin: 10px 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-section {
+            padding: 20px;
+            text-align: center;
+            background-color: grey;
+            margin: 20px;
+            border-radius: 15px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .opening-hours {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+
+        .opening-hours li {
+            margin-bottom: 5px;
         }
 
         footer {
@@ -62,29 +103,18 @@
             color: white;
             text-align: center;
             padding: 10px;
-            margin-top: 180px;
         }
 
-        .info-section {
-            padding: 40px;
-            text-align: center;
-            background-color: whitesmoke;
-            margin: 35px;
-            border-radius: 30px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        footer a {
+            color: #f9f9f9;
+            text-decoration: underline;
         }
 
-        .opening-hours {
-    list-style: none; /* Entfernt die Aufzählungszeichen */
-    padding: 0; /* Entfernt den Standard-Abstand */
-    margin: 0;
-    text-align: left; /* Links ausgerichtet */
-}
-
-.opening-hours li {
-    margin-bottom: 5px; /* Abstand zwischen den Einträgen */
-}
-
+        @media (max-width: 768px) {
+            .menu {
+                flex: 1 1 100%;
+            }
+        }
     </style>
 </head>
 
@@ -94,7 +124,13 @@
         <p>Oberhausen, Bebelstr.195, 46049</p>
     </header>
 
-    <!-- Der Container für die beiden Menüs -->
+    <div class="images">
+        <img src="https://via.placeholder.com/300x200" alt="Döner Bild 1">
+        <img src="https://via.placeholder.com/300x200" alt="Döner Bild 2">
+        <img src="https://via.placeholder.com/300x200" alt="Döner Bild 3">
+        <img src="https://via.placeholder.com/300x200" alt="Döner Bild 4">
+    </div>
+
     <div class="menu-container">
         <div class="menu">
             <h2>Unser Menü</h2>
@@ -216,10 +252,8 @@
                 <span><b>29. </b>Zaziki</span>
                 <span>4,00 €</span>
             </div>
-        </div>
-
-        <!-- Zweite Menübox -->
-        <div class="menu2">
+       
+       
             <h3>Beilagen :</h3>
             <div class="menu-item">
                 <span><b>30. </b>Pommes Frites</span>
@@ -313,19 +347,19 @@
 
     <div class="info-section">
         <h2>Besuchen Sie uns!</h2>
-        
         <ul class="opening-hours">
-            <li><p><strong>Öffnungszeiten: </strong></p>Montag - Samstag : 11:00 - 22:30 Uhr</li>
-            <li>Sonntags : 12:00 - 22:30 Uhr</li>
-            <p><strong>Lieferzeiten: </strong></p>
-            <li>Montag - Sonntag : 12:00 - 22:30 Uhr</li>
-            <br>Bestellen können sie über Lieferando, Whatsapp oder per Anruf.</br>
-            <p><strong>Tel.: </strong>0208 89957900</p>
+            <center>
+                <li><strong>Öffnungszeiten:</strong> Montag - Samstag: 11:00 - 22:30 Uhr</li>
+                <li>Sonntag: 12:00 - 22:30 Uhr</li>
+                <li><strong>Lieferzeiten:</strong> Montag - Sonntag: 12:00 - 22:30 Uhr</li>
+            </center>
         </ul>
+        <p>Bestellen Sie über Lieferando, WhatsApp oder per Anruf.</p>
+        <p><strong>Tel.:</strong> 0208 89957900</p>
     </div>
-    
+
     <footer>
-        <p>Lassen sie doch gerne eine Bewertung da! --> <a href="https://www.google.com/maps/place/Meister+D%C3%B6ner/@51.4615071,6.8339903,15z/data=!4m8!3m7!1s0x47b8c06a9b215749:0x8d2f10c5243deace!8m2!3d51.461509!4d6.8339757!9m1!1b1!16s%2Fg%2F11c5rpgvm0?hl=de&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Bewertungsportal</a></p>
+        <p>Lassen Sie gerne eine Bewertung da! --> <a href="https://www.google.com/maps/place/Meister+D%C3%B6ner/@51.4615071,6.8339903,15z/data=!4m8!3m7!1s0x47b8c06a9b215749:0x8d2f10c5243deace!8m2!3d51.461509!4d6.8339757!9m1!1b1!16s%2Fg%2F11c5rpgvm0?hl=de&entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D">Bewertungsportal</a></p>
     </footer>
 </body>
 
